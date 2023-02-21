@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Palashicheva_ProkatCars"
       mc:Ignorable="d" 
-      d:DesignHeight="1000" d:DesignWidth="1000"
+      d:DesignHeight="1000" d:DesignWidth="1200"
       Title="CarPage" IsVisibleChanged="Page_IsVisibleChanged">
 
     <Grid>
@@ -17,14 +17,14 @@
         <DataGrid x:Name="DGrid" AutoGenerateColumns="False" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Модель" Binding="{Binding Model}" Width="*"/>
-                <DataGridTextColumn Header="Марка" Binding="{Binding Brand.NameBrand}" Width="150"/>
-                <DataGridTextColumn Header="Год выпуска" Binding="{Binding Year}" Width="150"/>
+                <DataGridTextColumn Header="Марка" Binding="{Binding Brand.NameBrand}" Width="*"/>
+                <DataGridTextColumn Header="Год выпуска" Binding="{Binding Year}" Width="100"/>
                 <DataGridTextColumn Header="Цвет" Binding="{Binding Color.NameColor}" Width="150"/>
-                <DataGridTextColumn Header="Номер" Binding="{Binding Number}" Width="250"/>
-                <DataGridTextColumn Header="Цена сутки" Binding="{Binding DayPrice}" Width="250"/>
-                <DataGridCheckBoxColumn Header="Арендована?" Binding="{Binding Rented}" Width="250"/>
+                <DataGridTextColumn Header="Номер" Binding="{Binding Number}" Width="70"/>
+                <DataGridTextColumn Header="Цена сутки" Binding="{Binding DayPrice}" Width="150"/>
+                <DataGridCheckBoxColumn Header="Арендована?" Binding="{Binding Rented}" Width="100"/>
 
-                <DataGridTemplateColumn Width="auto">
+                <DataGridTemplateColumn Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button Content="Редактировать" Name="BtnEdit" Click="BtnEdit_Click" />

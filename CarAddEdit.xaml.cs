@@ -36,21 +36,19 @@ namespace Palashicheva_ProkatCars
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
             StringBuilder errors = new StringBuilder();
-            
+
             if (string.IsNullOrWhiteSpace(_current.Model))
                 errors.AppendLine("Укажите модель авто");
             if (_current.Brand == null)
                 errors.AppendLine("Укажите марку");
-            if (_current.Year <= 1900)
+            if (_current.Year <= 1920 || _current.Year.ToString(tbYear.Text).Length < 4)
                 errors.AppendLine("Пожалуйста введите корректный год выпуска в формате YYYY");
             if (_current.Color == null)
                 errors.AppendLine("Укажите цвет");
-            if (string.IsNullOrWhiteSpace(_current.Number))
-                errors.AppendLine("Укажите номер автомобиля");
+            if (string.IsNullOrWhiteSpace(_current.Number) || _current.Number.Length < 6)
+                errors.AppendLine("Укажите номер автомобиля(Номер должен состоять из 1 буквы, 3 цифр и 2 букв)");
             if (_current.DayPrice <= 0)
-                errors.AppendLine("Цена сутки не может быть отрицательной или равна нуля");
-            if (_current.Rented ==true)
-                errors.AppendLine("При добавлении машина не может быть сразу арендована");
+                errors.AppendLine("Цена сутки не может быть отрицательной или равна нулю");
 
             if (errors.Length > 0)
             {
