@@ -22,7 +22,6 @@
           <Property Name="Year" Type="decimal" Precision="4" Scale="0" Nullable="false" />
           <Property Name="ColorId" Type="int" Nullable="false" />
           <Property Name="Number" Type="nvarchar" MaxLength="6" Nullable="false" />
-          <Property Name="Price" Type="money" Nullable="false" />
           <Property Name="DayPrice" Type="money" Nullable="false" />
           <Property Name="Rented" Type="bit" Nullable="false" />
         </EntityType>
@@ -164,7 +163,6 @@
           <Property Name="Year" Type="Decimal" Precision="4" Scale="0" Nullable="false" />
           <Property Name="ColorId" Type="Int32" Nullable="false" />
           <Property Name="Number" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
           <Property Name="DayPrice" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
           <Property Name="Rented" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Brand" Relationship="Self.FK_Car_Brand" FromRole="Car" ToRole="Brand" />
@@ -313,7 +311,6 @@
                 <ScalarProperty Name="Year" ColumnName="Year" />
                 <ScalarProperty Name="ColorId" ColumnName="ColorId" />
                 <ScalarProperty Name="Number" ColumnName="Number" />
-                <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="DayPrice" ColumnName="DayPrice" />
                 <ScalarProperty Name="Rented" ColumnName="Rented" />
               </MappingFragment>

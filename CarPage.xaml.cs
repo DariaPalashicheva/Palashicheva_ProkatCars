@@ -23,6 +23,49 @@ namespace Palashicheva_ProkatCars
         public CarPage()
         {
             InitializeComponent();
+            DGrid.ItemsSource = ProkatEntities.GetContext().Car.ToList();
+
+        }
+
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new CarAddEdit(null));
+        }
+
+        private void BtnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            var ForRemoving = DGrid.SelectedItems.Cast<Car>().ToList();
+
+            if (MessageBox.Show($"Вы точно хотите удалить следующие {ForRemoving.Count()} элементов?", "Внимание",
+            MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    ProkatEntities.GetContext().Car.RemoveRange(ForRemoving);
+                    ProkatEntities.GetContext().SaveChanges();
+                    MessageBox.Show("Данные удалены");
+
+                    DGrid.ItemsSource = ProkatEntities.GetContext().Car.ToList();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+            }
+        }
+
+        private void BtnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new CarAddEdit((sender as Button).DataContext as Car));
+        }
+
+        private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            if (Visibility == Visibility.Visible)
+            {
+                ProkatEntities.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
+                DGrid.ItemsSource = ProkatEntities.GetContext().Car.ToList();
+            }
         }
     }
 }

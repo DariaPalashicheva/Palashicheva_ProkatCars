@@ -26,7 +26,6 @@ namespace Palashicheva_ProkatCars
         public decimal Year { get; set; }
         public int ColorId { get; set; }
         public string Number { get; set; }
-        public decimal Price { get; set; }
         public decimal DayPrice { get; set; }
         public bool Rented { get; set; }
     

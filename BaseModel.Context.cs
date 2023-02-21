@@ -21,7 +21,6 @@ namespace Palashicheva_ProkatCars
         {
             if (_context == null)
                 _context = new ProkatEntities();
-
             return _context;
         }
 

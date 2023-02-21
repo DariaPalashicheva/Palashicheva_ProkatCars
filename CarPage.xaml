@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Palashicheva_ProkatCars"
       mc:Ignorable="d" 
       d:DesignHeight="1000" d:DesignWidth="1000"
-      Title="CarPage">
+      Title="CarPage" IsVisibleChanged="Page_IsVisibleChanged">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -16,11 +16,14 @@
 
         <DataGrid x:Name="DGrid" AutoGenerateColumns="False" IsReadOnly="True">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Наименование товара" Binding="{Binding Model}" Width="*"/>
-                <DataGridTextColumn Header="Артикул" Binding="{Binding Brand.NameBrand}" Width="150"/>
-                <DataGridTextColumn Header="Вид товара" Width="250"/>
-                <DataGridTextColumn Header="Цена" Binding="{Binding Color.NameColor}" Width="150"/>
-                <DataGridTextColumn Header="Производитель" Binding="{Binding Number}" Width="250"/>
+                <DataGridTextColumn Header="Модель" Binding="{Binding Model}" Width="*"/>
+                <DataGridTextColumn Header="Марка" Binding="{Binding Brand.NameBrand}" Width="150"/>
+                <DataGridTextColumn Header="Год выпуска" Binding="{Binding Year}" Width="150"/>
+                <DataGridTextColumn Header="Цвет" Binding="{Binding Color.NameColor}" Width="150"/>
+                <DataGridTextColumn Header="Номер" Binding="{Binding Number}" Width="250"/>
+                <DataGridTextColumn Header="Цена сутки" Binding="{Binding DayPrice}" Width="250"/>
+                <DataGridCheckBoxColumn Header="Арендована?" Binding="{Binding Rented}" Width="250"/>
+
                 <DataGridTemplateColumn Width="auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
