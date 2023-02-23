@@ -38,11 +38,11 @@ namespace Palashicheva_ProkatCars
             StringBuilder errors = new StringBuilder();
 
             if (string.IsNullOrWhiteSpace(_current.Model))
-                errors.AppendLine("Укажите модель авто");
+                errors.AppendLine("Введите модель авто");
             if (_current.Brand == null)
                 errors.AppendLine("Укажите марку");
             if (_current.Year <= 1920 || _current.Year.ToString(tbYear.Text).Length < 4)
-                errors.AppendLine("Пожалуйста введите корректный год выпуска в формате YYYY");
+                errors.AppendLine("Пожалуйста введите корректный год выпуска (из 4 цифр)");
             if (_current.Color == null)
                 errors.AppendLine("Укажите цвет");
             if (string.IsNullOrWhiteSpace(_current.Number) || _current.Number.Length < 6)

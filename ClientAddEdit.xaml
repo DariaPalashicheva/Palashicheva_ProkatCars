@@ -1,0 +1,49 @@
+﻿<Page x:Class="Palashicheva_ProkatCars.ClientAddEdit"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Palashicheva_ProkatCars"
+      mc:Ignorable="d" 
+      d:DesignHeight="1000" d:DesignWidth="1200"
+      Title="ClientAddEdit">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Фамилия"  Style="{StaticResource TB}"/>
+        <TextBlock Text="Имя" Grid.Row="1" Style="{StaticResource TB}"/>
+        <TextBlock Text="Отчество" Grid.Row="2" Style="{StaticResource TB}"/>
+        <TextBlock Text="Дата рождения" Grid.Row="3" Style="{StaticResource TB}"/>
+        <TextBlock Text="Паспорт" Grid.Row="4" Style="{StaticResource TB}"/>
+        <TextBlock Text="Адрес" Grid.Row="5" Style="{StaticResource TB}"/>
+        <TextBlock Text="Номер телефона" Grid.Row="6" Style="{StaticResource TB}"/>
+        <TextBlock TextWrapping="Wrap" Text="Серия и номер вод.уд." Grid.Row="0" Grid.Column="2" Style="{StaticResource TB}"/>
+        <TextBlock TextWrapping="Wrap" Text="Дата выдачи вод.уд." Grid.Row="1" Grid.Column="2" Style="{StaticResource TB}"/>
+        <TextBox Text="{Binding Familiya}" MaxLength="50" Grid.Column="1"/>
+        <TextBox Text="{Binding Name}" MaxLength="50" Grid.Row="1" Grid.Column="1"/>
+        <TextBox Text="{Binding Otchestvo}" MaxLength="50" Grid.Row="2" Grid.Column="1"/>
+        <TextBox Text="{Binding DateBirth, StringFormat={}{0:dd-MM-yyyy}}" Grid.Row="3" Grid.Column="1"/>
+        <TextBox x:Name="tbPassport" Text="{Binding Passport}" Grid.Row="4" Grid.Column="1" MaxLength="10"/>
+        <TextBox Text="{Binding Address}" MaxLength="100" Grid.Row="5" Grid.Column="1"/>
+        <TextBox x:Name="tbPhoneNumber" Text="{Binding PhoneNumber}" Grid.Row="6" Grid.Column="1" MaxLength="11"/>
+        <TextBox x:Name="tbSeriesNumberLicense" Text="{Binding SeriesNumberLicense}" Grid.Row="0" Grid.Column="3" MaxLength="10"/>
+        <TextBox Text="{Binding DateDriverLicense, StringFormat={}{0:yyyy-MM-dd}}" Grid.Row="1" Grid.Column="3"/>
+        
+        <Button Content="Сохранить" Grid.ColumnSpan="2" Grid.Row="7" Name="BtnSave" Click="BtnSave_Click"/>
+    </Grid>
+</Page>

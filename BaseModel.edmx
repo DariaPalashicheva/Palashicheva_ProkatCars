@@ -30,16 +30,15 @@
             <PropertyRef Name="IdClient" />
           </Key>
           <Property Name="IdClient" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Familiya" Type="nvarchar" MaxLength="30" Nullable="false" />
-          <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
-          <Property Name="Otchestvo" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Familiya" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Otchestvo" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="DateBirth" Type="date" Nullable="false" />
           <Property Name="Passport" Type="decimal" Precision="10" Scale="0" Nullable="false" />
-          <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="PhoneNumber" Type="decimal" Precision="11" Scale="0" Nullable="false" />
           <Property Name="SeriesNumberLicense" Type="decimal" Precision="10" Scale="0" Nullable="false" />
           <Property Name="DateDriverLicense" Type="date" Nullable="false" />
-          <Property Name="Experience" Type="decimal" Precision="2" Scale="0" Nullable="false" />
         </EntityType>
         <EntityType Name="Color">
           <Key>
@@ -174,16 +173,15 @@
             <PropertyRef Name="IdClient" />
           </Key>
           <Property Name="IdClient" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Familiya" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Otchestvo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Familiya" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Otchestvo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="DateBirth" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Passport" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
-          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="PhoneNumber" Type="Decimal" Precision="11" Scale="0" Nullable="false" />
           <Property Name="SeriesNumberLicense" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
           <Property Name="DateDriverLicense" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="Experience" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
           <NavigationProperty Name="Rent" Relationship="Self.FK_Rent_Client" FromRole="Client" ToRole="Rent" />
         </EntityType>
         <EntityType Name="Color">
@@ -329,7 +327,6 @@
                 <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
                 <ScalarProperty Name="SeriesNumberLicense" ColumnName="SeriesNumberLicense" />
                 <ScalarProperty Name="DateDriverLicense" ColumnName="DateDriverLicense" />
-                <ScalarProperty Name="Experience" ColumnName="Experience" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
