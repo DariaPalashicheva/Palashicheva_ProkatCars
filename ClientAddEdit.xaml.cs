@@ -41,7 +41,7 @@ namespace Palashicheva_ProkatCars
                 errors.AppendLine("Введите имя");
             if (string.IsNullOrWhiteSpace(_current.Otchestvo))
                 errors.AppendLine("Введите отчество");
-            if (_current.DateBirth == null)
+            if (_current.DateBirth.Year <1930)
                 errors.AppendLine("Укажите дату рождения");
             if (_current.Passport <= 0 || _current.Passport.ToString(tbPassport.Text).Length < 10)
                 errors.AppendLine("Проверьте! Паспорт должен состоять из серии(4 цифры) и номера(6 цифр)");
@@ -49,9 +49,9 @@ namespace Palashicheva_ProkatCars
                 errors.AppendLine("Введите адрес");
             if (_current.PhoneNumber <= 0 || _current.Passport.ToString(tbPhoneNumber.Text).Length < 11)
                 errors.AppendLine("Введите номер телефона в формате 89991234455 (11 цифр)");
-            if (_current.Passport <= 0 || _current.Passport.ToString(tbPassport.Text).Length < 10)
+            if (_current.SeriesNumberLicense <= 0 || _current.Passport.ToString(tbPassport.Text).Length < 10)
                 errors.AppendLine("Введите серию(4 цифры) и номер(6 цифр) водительского удостоверения");
-            if (_current.DateDriverLicense == null)
+            if (_current.DateDriverLicense.Year < 2013)
                 errors.AppendLine("Укажите дату выдачи водительского удостоверения");
 
             if (errors.Length >0)
@@ -60,7 +60,7 @@ namespace Palashicheva_ProkatCars
                 return;
             }
 
-            if (_current.IdClient == 9)
+            if (_current.IdClient == 0)
                 ProkatEntities.GetContext().Client.Add(_current);
 
             try

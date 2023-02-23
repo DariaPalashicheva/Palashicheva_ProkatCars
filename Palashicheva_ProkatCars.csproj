@@ -110,6 +110,12 @@
     <Compile Include="Rent.cs">
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="RentAddEdit.xaml.cs">
+      <DependentUpon>RentAddEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RentPage.xaml.cs">
+      <DependentUpon>RentPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="sysdiagrams.cs">
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
@@ -145,6 +151,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="RentAddEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

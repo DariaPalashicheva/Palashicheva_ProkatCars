@@ -16,46 +16,14 @@ using System.Windows.Shapes;
 namespace Palashicheva_ProkatCars
 {
     /// <summary>
-    /// Логика взаимодействия для ClientPage.xaml
+    /// Логика взаимодействия для RentPage.xaml
     /// </summary>
-    public partial class ClientPage : Page
+    public partial class RentPage : Page
     {
-        public ClientPage()
+        public RentPage()
         {
             InitializeComponent();
-            DGrid.ItemsSource = ProkatEntities.GetContext().Client.ToList();
-        }
-
-        private void BtnEdit_Click(object sender, RoutedEventArgs e)
-        {
-            Manager.MainFrame.Navigate(new ClientAddEdit((sender as Button).DataContext as Client));
-        }
-
-        private void BtnAdd_Click(object sender, RoutedEventArgs e)
-        {
-            Manager.MainFrame.Navigate(new ClientAddEdit(null));
-        }
-
-        private void BtnDelete_Click(object sender, RoutedEventArgs e)
-        {
-            var ForRemoving = DGrid.SelectedItems.Cast<Client>().ToList();
-
-            if (MessageBox.Show($"Вы точно хотите удалить следующие {ForRemoving.Count()} элементов?", "Внимание",
-            MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
-            {
-                try
-                {
-                    ProkatEntities.GetContext().Client.RemoveRange(ForRemoving);
-                    ProkatEntities.GetContext().SaveChanges();
-                    MessageBox.Show("Данные удалены");
-
-                    DGrid.ItemsSource = ProkatEntities.GetContext().Client.ToList();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message.ToString());
-                }
-            }
+            DGrid.ItemsSource = ProkatEntities.GetContext().Rent.ToList();
         }
 
         private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
@@ -63,7 +31,39 @@ namespace Palashicheva_ProkatCars
             if (Visibility == Visibility.Visible)
             {
                 ProkatEntities.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
-                DGrid.ItemsSource = ProkatEntities.GetContext().Client.ToList();
+                DGrid.ItemsSource = ProkatEntities.GetContext().Rent.ToList();
+            }
+        }
+
+        private void BtnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new RentAddEdit((sender as Button).DataContext as Rent));
+        }
+
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new RentAddEdit(null));
+        }
+
+        private void BtnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            var ForRemoving = DGrid.SelectedItems.Cast<Rent>().ToList();
+
+            if (MessageBox.Show($"Вы точно хотите удалить следующие {ForRemoving.Count()} элементов?", "Внимание",
+            MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
+            {
+                try
+                {
+                    ProkatEntities.GetContext().Rent.RemoveRange(ForRemoving);
+                    ProkatEntities.GetContext().SaveChanges();
+                    MessageBox.Show("Данные удалены");
+
+                    DGrid.ItemsSource = ProkatEntities.GetContext().Rent.ToList();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
             }
         }
     }

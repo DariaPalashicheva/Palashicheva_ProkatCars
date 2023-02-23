@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Palashicheva_ProkatCars"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1000" Width="1400" MinHeight="1000" MinWidth="1400" WindowStartupLocation="CenterScreen">
+        Title="Прокат автомобилей" Height="1000" Width="1400" MinHeight="1000" MinWidth="1400" WindowStartupLocation="CenterScreen">
     <Grid Background="LightGray">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -20,11 +20,11 @@
         <Grid Background="#FFA7BFE0" Grid.Row="1" Grid.Column="1"/>
         <Grid Background="#FF3F4575" Grid.Row="2" Grid.ColumnSpan="2"/>
         <StackPanel Grid.Column="2" Grid.Row="1" VerticalAlignment="Center">
-            <Button x:Name="bt_car" Content="Машины" Background="#FF5BBFFF" Click="bt_car_Click"/>
-            <Button x:Name="bt_client" Content="Клиенты" Background="#FF5BBFFF" />
-            <Button x:Name="bt_rent" Content="Заявки" Background="#FF5BBFFF" />
-            <Button x:Name="bt_brand" Content="Марки" Background="#FF5BBFFF" />
-            <Button x:Name="bt_color" Content="Цвета" Background="#FF5BBFFF" />
+            <Button x:Name="BtnCar" Content="Машины" Background="#FF5BBFFF" Click="BtnCar_Click"/>
+            <Button x:Name="BtnClient" Content="Клиенты" Background="#FF5BBFFF" Click="BtnClient_Click"/>
+            <Button x:Name="BtnRent" Content="Заявки" Background="#FF5BBFFF" Click="BtnRent_Click"/>
+            <Button x:Name="BtnBrand" Content="Марки" Background="#FF5BBFFF" />
+            <Button x:Name="BtnColor" Content="Цвета" Background="#FF5BBFFF" />
         </StackPanel>
         <Image Source="Resources/Icon.png" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
         <TextBlock Text="Прокат автомобилей" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2" Foreground="White"/>
