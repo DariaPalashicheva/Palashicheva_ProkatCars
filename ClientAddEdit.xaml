@@ -37,7 +37,7 @@
         <TextBox Text="{Binding Familiya}" MaxLength="50" Grid.Column="1"/>
         <TextBox Text="{Binding Name}" MaxLength="50" Grid.Row="1" Grid.Column="1"/>
         <TextBox Text="{Binding Otchestvo}" MaxLength="50" Grid.Row="2" Grid.Column="1"/>
-        <TextBox Text="{Binding DateBirth, StringFormat={}{0:yyyy-M-dd}}" Grid.Row="3" Grid.Column="1"/>
+        <DatePicker SelectedDate="{Binding DateBirth, StringFormat={}{0:dd-MM-yyyy}}" Grid.Row="3" Grid.Column="1" FirstDayOfWeek="Monday" />
         <TextBox x:Name="tbPassport" Text="{Binding Passport}" Grid.Row="4" Grid.Column="1" MaxLength="10"/>
         <TextBox Text="{Binding Address}" MaxLength="100" Grid.Row="5" Grid.Column="1"/>
         <TextBox x:Name="tbPhoneNumber" Text="{Binding PhoneNumber}" Grid.Row="6" Grid.Column="1" MaxLength="11"/>

@@ -116,9 +116,6 @@
     <Compile Include="RentPage.xaml.cs">
       <DependentUpon>RentPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagrams.cs">
-      <DependentUpon>BaseModel.tt</DependentUpon>
-    </Compile>
     <Page Include="CarAddEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

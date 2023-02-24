@@ -24,6 +24,7 @@ namespace Palashicheva_ProkatCars
         {
             InitializeComponent();
             DGrid.ItemsSource = ProkatEntities.GetContext().Rent.ToList();
+            DGrid.ItemsSource = ProkatEntities.GetContext().Car.ToList();
         }
 
         private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)

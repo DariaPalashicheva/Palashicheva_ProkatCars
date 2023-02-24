@@ -45,7 +45,7 @@ namespace Palashicheva_ProkatCars
             if (_current.StartDate.Year < 2000)
                 errors.AppendLine("Введите дату начала аренды");
             if (_current.Days <= 0)
-                errors.AppendLine("Количество дней проката не может быть отрицательным или равнятся 0");  
+                errors.AppendLine("Количество дней проката не может быть отрицательным или равнятся 0");
 
             if (errors.Length > 0)
             {

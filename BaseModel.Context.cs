@@ -39,6 +39,5 @@ namespace Palashicheva_ProkatCars
         public virtual DbSet<Client> Client { get; set; }
         public virtual DbSet<Color> Color { get; set; }
         public virtual DbSet<Rent> Rent { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }
