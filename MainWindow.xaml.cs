@@ -58,5 +58,10 @@ namespace Palashicheva_ProkatCars
         {
             Manager.MainFrame.Navigate(new RentPage());
         }
+
+        private void BtnBrand_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new BrandPage());
+        }
     }
 }

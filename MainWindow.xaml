@@ -20,14 +20,13 @@
         <Grid Background="#FFA7BFE0" Grid.Row="1" Grid.Column="1"/>
         <Grid Background="#FF3F4575" Grid.Row="2" Grid.ColumnSpan="2"/>
         <StackPanel Grid.Column="2" Grid.Row="1" VerticalAlignment="Center">
-            <Button x:Name="BtnCar" Content="Машины" Background="#FF5BBFFF" Click="BtnCar_Click"/>
-            <Button x:Name="BtnClient" Content="Клиенты" Background="#FF5BBFFF" Click="BtnClient_Click"/>
-            <Button x:Name="BtnRent" Content="Заявки" Background="#FF5BBFFF" Click="BtnRent_Click"/>
-            <Button x:Name="BtnBrand" Content="Марки" Background="#FF5BBFFF" />
-            <Button x:Name="BtnColor" Content="Цвета" Background="#FF5BBFFF" />
+            <Button x:Name="BtnCar" Content="Автомобили"  Click="BtnCar_Click" Style="{StaticResource MainBt}"/>
+            <Button x:Name="BtnClient" Content="Клиенты"  Click="BtnClient_Click" Style="{StaticResource MainBt}" />
+            <Button x:Name="BtnRent" Content="Заявки"  Click="BtnRent_Click" Style="{StaticResource MainBt}"/>
+            <Button x:Name="BtnBrand" Content="Марки" Click="BtnBrand_Click" Style="{StaticResource MainBt}"/>
         </StackPanel>
         <Image Source="Resources/Icon.png" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
-        <TextBlock Text="Прокат автомобилей" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2" Foreground="White"/>
+        <TextBlock Text="Прокат автомобилей" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2" Foreground="White"/>
         <Frame NavigationUIVisibility="Hidden" ContentRendered="MainFrame_ContentRendered" Grid.Row="1" Name="MainFrame"/>
         <Button Grid.Row="2" Content="Назад" Name="BtnBack" HorizontalAlignment="Right" Click="BtnBack_Click"/>
     </Grid>

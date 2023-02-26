@@ -16,36 +16,27 @@ using System.Windows.Shapes;
 namespace Palashicheva_ProkatCars
 {
     /// <summary>
-    /// Логика взаимодействия для RentAddEdit.xaml
+    /// Логика взаимодействия для BrandAddEdit.xaml
     /// </summary>
-    public partial class RentAddEdit : Page
+    public partial class BrandAddEdit : Page
     {
-        private Rent _current = new Rent();
+        private Brand _current = new Brand();
 
-        public RentAddEdit(Rent selected)
+        public BrandAddEdit(Brand selected)
         {
             InitializeComponent();
             if (selected != null)
                 _current = selected;
 
             DataContext = _current;
-            ComboClient.ItemsSource = ProkatEntities.GetContext().Client.ToList();
-            ComboCar.ItemsSource = ProkatEntities.GetContext().Car.ToList();
         }
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
             StringBuilder errors = new StringBuilder();
 
-
-            if (_current.Client == null)
-                errors.AppendLine("Укажите клиента");
-            if (_current.Car == null)
-                errors.AppendLine("Укажите машину");
-            if (_current.StartDate.Year < 2000)
-                errors.AppendLine("Введите дату начала аренды");
-            if (_current.Days <= 0)
-                errors.AppendLine("Количество дней проката не может быть отрицательным или равнятся 0");
+            if (string.IsNullOrWhiteSpace(_current.NameBrand))
+                errors.AppendLine("Введите марку автомобиля");
 
             if (errors.Length > 0)
             {
@@ -53,23 +44,19 @@ namespace Palashicheva_ProkatCars
                 return;
             }
 
-            if (_current.IdRent == 0)
-                ProkatEntities.GetContext().Rent.Add(_current);
+            if (_current.IdBrand == 0)
+                ProkatEntities.GetContext().Brand.Add(_current);
 
             try
             {
                 ProkatEntities.GetContext().SaveChanges();
                 MessageBox.Show("Информация сохранена!");
             }
+
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString());
             }
-        }
-
-        private void BtnSave_Click_1(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

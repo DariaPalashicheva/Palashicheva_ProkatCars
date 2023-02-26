@@ -82,6 +82,12 @@
     <Compile Include="Brand.cs">
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="BrandAddEdit.xaml.cs">
+      <DependentUpon>BrandAddEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BrandPage.xaml.cs">
+      <DependentUpon>BrandPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Car.cs">
       <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
@@ -116,6 +122,14 @@
     <Compile Include="RentPage.xaml.cs">
       <DependentUpon>RentPage.xaml</DependentUpon>
     </Compile>
+    <Page Include="BrandAddEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BrandPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CarAddEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

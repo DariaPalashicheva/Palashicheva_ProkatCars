@@ -30,7 +30,7 @@
         <TextBlock Text="Отчество" Grid.Row="2" Style="{StaticResource TB}"/>
         <TextBlock Text="Дата рождения" Grid.Row="3" Style="{StaticResource TB}"/>
         <TextBlock Text="Паспорт" Grid.Row="4" Style="{StaticResource TB}"/>
-        <TextBlock Text="Адрес" Grid.Row="5" Style="{StaticResource TB}"/>
+        <TextBlock Text="Адрес" TextWrapping="Wrap" Grid.Row="5" Style="{StaticResource TB}"/>
         <TextBlock Text="Номер телефона" Grid.Row="6" Style="{StaticResource TB}"/>
         <TextBlock TextWrapping="Wrap" Text="Серия и номер вод.уд." Grid.Row="0" Grid.Column="2" Style="{StaticResource TB}"/>
         <TextBlock TextWrapping="Wrap" Text="Дата выдачи вод.уд." Grid.Row="1" Grid.Column="2" Style="{StaticResource TB}"/>
