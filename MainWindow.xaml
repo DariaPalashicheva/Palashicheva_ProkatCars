@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Palashicheva_ProkatCars"
         mc:Ignorable="d"
-        Title="Прокат автомобилей" Height="1000" Width="1400" MinHeight="1000" MinWidth="1400" WindowStartupLocation="CenterScreen">
+        Title="Прокат автомобилей" Height="1000" Width="1400" MinHeight="1000" MinWidth="1400" WindowStartupLocation="CenterScreen" Icon="/Resources/Logo.ico">
     <Grid Background="LightGray">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -25,7 +25,7 @@
             <Button x:Name="BtnRent" Content="Заявки"  Click="BtnRent_Click" Style="{StaticResource MainBt}"/>
             <Button x:Name="BtnBrand" Content="Марки" Click="BtnBrand_Click" Style="{StaticResource MainBt}"/>
         </StackPanel>
-        <Image Source="Resources/Icon.png" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
+        <Image Source="Resources/Icon.png" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="20 5 0 5"/>
         <TextBlock Text="ProCARt" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2" Foreground="White" FontWeight="Bold"/>
         <Frame NavigationUIVisibility="Hidden" ContentRendered="MainFrame_ContentRendered" Grid.Row="1" Name="MainFrame"/>
         <Button Grid.Row="2" Content="Назад" Name="BtnBack" HorizontalAlignment="Right" Click="BtnBack_Click"/>

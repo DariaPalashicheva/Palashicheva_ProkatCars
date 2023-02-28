@@ -222,6 +222,8 @@
       <DependentUpon>BaseModel.edmx</DependentUpon>
       <LastGenOutput>BaseModel.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\main.png" />
+    <Resource Include="Resources\Logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
