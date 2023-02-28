@@ -20,7 +20,7 @@
                 <DataGridTextColumn Header="Автомобиль" Binding="{Binding Car.Model}" Width="*"/>
                 <DataGridTextColumn Header="Дата начала" Binding="{Binding StartDate, StringFormat={}{0:dd-MM-yyyy}}" Width="100"/>
 
-                <DataGridTextColumn Header="Дней" Binding="{Binding Days}" Width="150"/>
+                <DataGridTextColumn x:Name="tbDays" Header="Дней" Binding="{Binding Days}" Width="150"/>
 
                 <DataGridTemplateColumn Width="*">
                     <DataGridTemplateColumn.CellTemplate>

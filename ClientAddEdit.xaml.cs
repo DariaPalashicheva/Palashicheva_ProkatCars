@@ -35,23 +35,23 @@ namespace Palashicheva_ProkatCars
         {
             StringBuilder errors = new StringBuilder();
 
-            if (string.IsNullOrWhiteSpace(_current.Familiya))
+            if (string.IsNullOrWhiteSpace(_current.Familiya) || tbFamiliya.Text.Any(Char.IsDigit))
                 errors.AppendLine("Введите фамилию");
-            if (string.IsNullOrWhiteSpace(_current.Name))
+            if (string.IsNullOrWhiteSpace(_current.Name) || tbName.Text.Any(Char.IsDigit))
                 errors.AppendLine("Введите имя");
-            if (string.IsNullOrWhiteSpace(_current.Otchestvo))
+            if (string.IsNullOrWhiteSpace(_current.Otchestvo) || tbOtchestvo.Text.Any(Char.IsDigit))
                 errors.AppendLine("Введите отчество");
             if (_current.DateBirth.Year <1930)
                 errors.AppendLine("Укажите дату рождения");
-            if (_current.Passport <= 0 || _current.Passport.ToString(tbPassport.Text).Length < 10)
+            if (_current.Passport <= 0 || _current.Passport.ToString(tbPassport.Text).Length < 10 || tbPassport.Text.Any(Char.IsLetter))
                 errors.AppendLine("Проверьте! Паспорт должен состоять из серии(4 цифры) и номера(6 цифр)");
             if (string.IsNullOrWhiteSpace(_current.Address))
                 errors.AppendLine("Введите адрес");
-            if (_current.PhoneNumber <= 0 || _current.Passport.ToString(tbPhoneNumber.Text).Length < 11)
+            if (_current.PhoneNumber <= 0 || _current.Passport.ToString(tbPhoneNumber.Text).Length < 11 || tbPhoneNumber.Text.Any(Char.IsLetter))
                 errors.AppendLine("Введите номер телефона в формате 89991234455 (11 цифр)");
-            if (_current.SeriesNumberLicense <= 0 || _current.Passport.ToString(tbPassport.Text).Length < 10)
+            if (_current.SeriesNumberLicense <= 0 || _current.Passport.ToString(tbPassport.Text).Length < 10 || tbSeriesNumberLicense.Text.Any(Char.IsLetter))
                 errors.AppendLine("Введите серию(4 цифры) и номер(6 цифр) водительского удостоверения");
-            if (_current.DateDriverLicense.Year < 2013)
+            if (_current.DateDriverLicense.Year < 2013 )
                 errors.AppendLine("Укажите дату выдачи водительского удостоверения");
 
             if (errors.Length >0)
@@ -75,5 +75,6 @@ namespace Palashicheva_ProkatCars
             }
 
         }
+
     }
 }

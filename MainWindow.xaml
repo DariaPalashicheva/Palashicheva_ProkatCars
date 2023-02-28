@@ -26,7 +26,7 @@
             <Button x:Name="BtnBrand" Content="Марки" Click="BtnBrand_Click" Style="{StaticResource MainBt}"/>
         </StackPanel>
         <Image Source="Resources/Icon.png" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
-        <TextBlock Text="Прокат автомобилей" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2" Foreground="White"/>
+        <TextBlock Text="ProCARt" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2" Foreground="White" FontWeight="Bold"/>
         <Frame NavigationUIVisibility="Hidden" ContentRendered="MainFrame_ContentRendered" Grid.Row="1" Name="MainFrame"/>
         <Button Grid.Row="2" Content="Назад" Name="BtnBack" HorizontalAlignment="Right" Click="BtnBack_Click"/>
     </Grid>

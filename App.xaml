@@ -23,6 +23,14 @@
         </Style>
 
         <Style TargetType="TextBox">
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Width" Value="380"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+        <Style TargetType="DatePickerTextBox">
             <Setter Property="Margin" Value="5"/>
             <Setter Property="Width" Value="380"/>
             <Setter Property="Height" Value="50"/>
