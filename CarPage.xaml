@@ -21,7 +21,7 @@
                 <DataGridTextColumn Header="Год выпуска" Binding="{Binding Year}" Width="100"/>
                 <DataGridTextColumn Header="Цвет" Binding="{Binding Color.NameColor}" Width="150"/>
                 <DataGridTextColumn Header="Номер" Binding="{Binding Number}" Width="70"/>
-                <DataGridTextColumn Header="Цена сутки" Binding="{Binding DayPrice}" Width="150"/>
+                <DataGridTextColumn Header="Цена сутки" Binding="{Binding DayPrice, StringFormat=0.00}" Width="150"/>
                 <DataGridCheckBoxColumn Header="Арендована?" Binding="{Binding Rented}" Width="100"/>
 
                 <DataGridTemplateColumn Width="*">
