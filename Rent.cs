@@ -18,7 +18,7 @@ namespace Palashicheva_ProkatCars
         public int ClientId { get; set; }
         public int CarId { get; set; }
         public System.DateTime StartDate { get; set; }
-        public int Days { get; set; }
+        public System.DateTime EndDate { get; set; }
     
         public virtual Car Car { get; set; }
         public virtual Client Client { get; set; }

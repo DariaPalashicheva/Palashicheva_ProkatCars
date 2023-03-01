@@ -42,10 +42,10 @@ namespace Palashicheva_ProkatCars
                 errors.AppendLine("Укажите клиента");
             if (_current.Car == null)
                 errors.AppendLine("Укажите машину");
-            if (_current.StartDate.Year < 2000)
+            if (_current.StartDate.Year < 2000 || _current.StartDate.Year >= 2030)
                 errors.AppendLine("Введите дату начала аренды");
-            if (_current.Days <= 0 || tbDays.Text.Any(Char.IsLetter))
-                errors.AppendLine("Количество дней проката не может быть отрицательным или равнятся 0. Буквы не допустимы.");
+            if (_current.EndDate.Year < 2000 || _current.EndDate.Year >= 2030)
+                errors.AppendLine("Введите дату конца аренды");
 
             if (errors.Length > 0)
             {

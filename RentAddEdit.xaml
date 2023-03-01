@@ -27,11 +27,11 @@
         <TextBlock Text="Клиент"  Style="{StaticResource TB}"/>
         <TextBlock Text="Автомобиль" Grid.Row="1" Style="{StaticResource TB}"/>
         <TextBlock Text="Дата начала" Grid.Row="2" Style="{StaticResource TB}"/>
-        <TextBlock Text="Дней" Grid.Row="3" Style="{StaticResource TB}"/>
+        <TextBlock Text="Дата конца проката" Grid.Row="3" Style="{StaticResource TB}"/>
         <ComboBox SelectedItem="{Binding Client}" Grid.Row="0" Grid.Column="1" x:Name="ComboClient" DisplayMemberPath="Familiya"/>
         <ComboBox SelectedItem="{Binding Car}" Grid.Row="1" Grid.Column="1" x:Name="ComboCar" DisplayMemberPath="Model"/>
         <DatePicker SelectedDate="{Binding StartDate, StringFormat={}{0:dd-MM-yyyy}}" Grid.Row="2" Grid.Column="1" FirstDayOfWeek="Monday" />
-        <TextBox x:Name="tbDays" Text="{Binding Days}" Grid.Row="3" Grid.Column="1" MaxLength="3"/>
+        <DatePicker SelectedDate="{Binding EndDate, StringFormat={}{0:dd-MM-yyyy}}" Grid.Row="3" Grid.Column="1" FirstDayOfWeek="Monday" />
 
         <Button Content="Сохранить" Grid.ColumnSpan="3" Grid.Row="7" Name="BtnSave" Click="BtnSave_Click"/>
     </Grid>
