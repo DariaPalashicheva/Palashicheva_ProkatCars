@@ -47,7 +47,7 @@ namespace Palashicheva_ProkatCars
                 errors.AppendLine("Укажите цвет");
             if (string.IsNullOrWhiteSpace(_current.Number) || _current.Number.Length < 6)
                 errors.AppendLine("Укажите номер автомобиля(Номер должен состоять из 1 буквы, 3 цифр и 2 букв)");
-            if (_current.DayPrice <= 0 || tbYear.Text.Any(Char.IsLetter))
+            if (_current.DayPrice <= 0 || tbPrice.Text.Any(Char.IsLetter))
                 errors.AppendLine("Цена сутки не может быть отрицательной или равна нулю. Буквы не допустимы.");
 
             if (errors.Length > 0)
