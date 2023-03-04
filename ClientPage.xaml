@@ -30,6 +30,6 @@
         </DataGrid>
 
         <Button x:Name="BtnAdd" Content="Добавить" Grid.Row="1" HorizontalAlignment="Center" Click="BtnAdd_Click"/>
-        <Button x:Name="BtnDelete" Content="Добавить" Grid.Row="1" HorizontalAlignment="Right" Click="BtnDelete_Click"/>
+        <Button x:Name="BtnDelete" Content="Удалить" Grid.Row="1" HorizontalAlignment="Right" Click="BtnDelete_Click"/>
     </Grid>
 </Page>

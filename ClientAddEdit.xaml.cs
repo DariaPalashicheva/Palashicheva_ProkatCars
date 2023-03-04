@@ -49,7 +49,7 @@ namespace Palashicheva_ProkatCars
                 errors.AppendLine("Введите адрес");
             if (_current.PhoneNumber <= 0 || _current.Passport.ToString(tbPhoneNumber.Text).Length < 11 || tbPhoneNumber.Text.Any(Char.IsLetter))
                 errors.AppendLine("Введите номер телефона в формате 89991234455 (11 цифр)");
-            if (_current.SeriesNumberLicense <= 0 || _current.Passport.ToString(tbPassport.Text).Length < 10 || tbSeriesNumberLicense.Text.Any(Char.IsLetter))
+            if (_current.SeriesNumberLicense <= 0 || _current.Passport.ToString(tbSeriesNumberLicense.Text).Length < 10 || tbSeriesNumberLicense.Text.Any(Char.IsLetter))
                 errors.AppendLine("Введите серию(4 цифры) и номер(6 цифр) водительского удостоверения");
             if (_current.DateDriverLicense.Year < 2013 )
                 errors.AppendLine("Укажите дату выдачи водительского удостоверения");
