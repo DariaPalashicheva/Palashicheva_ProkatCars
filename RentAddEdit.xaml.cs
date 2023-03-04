@@ -67,9 +67,6 @@ namespace Palashicheva_ProkatCars
             }
         }
 
-        private void BtnSave_Click_1(object sender, RoutedEventArgs e)
-        {
 
-        }
     }
 }
